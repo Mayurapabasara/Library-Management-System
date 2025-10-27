@@ -1,0 +1,328 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fa;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e3a8a;
+  padding: 10px 20px;
+  color: white;
+}
+.navbar .logo {
+  font-size: 1.5rem;
+}
+.nav-link {
+  margin-left: 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+.nav-link.active {
+  border-bottom: 2px solid #facc15;
+}
+
+/* Main Content */
+.main-content {
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #facc15;
+  color: #1e3a8a;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Cards Section */
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  flex: 1 1 250px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #1e3a8a;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+/* Page Containers */
+.page-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #1e3a8a;
+  color: white;
+  margin-top: 20px;
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+.page-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.author-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.author-form input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+.author-form button {
+  padding: 8px 12px;
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.author-form button:hover {
+  background-color: #facc15;
+  color: #1e3a8a;
+}
+
+.author-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.author-table th,
+.author-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.author-table th {
+  background-color: #1e3a8a;
+  color: white;
+}
+
+.update-btn,
+.delete-btn {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.update-btn {
+  background-color: #facc15;
+  color: #1e3a8a;
+}
+
+.update-btn:hover {
+  background-color: #eab308;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+
+/* Book Form */
+.book-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.book-form input,
+.book-form select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+.book-form button {
+  padding: 8px 12px;
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book-form button:hover {
+  background-color: #facc15;
+  color: #1e3a8a;
+}
+
+/* Book Table */
+.book-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.book-table th,
+.book-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.book-table th {
+  background-color: #1e3a8a;
+  color: white;
+}
+
+.update-btn,
+.delete-btn {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.update-btn {
+  background-color: #facc15;
+  color: #1e3a8a;
+}
+
+.update-btn:hover {
+  background-color: #eab308;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+
+/* Member Form */
+.member-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.member-form input {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+.member-form button {
+  padding: 8px 12px;
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.member-form button:hover {
+  background-color: #facc15;
+  color: #1e3a8a;
+}
+
+/* Members Table */
+.member-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.member-table th,
+.member-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.member-table th {
+  background-color: #1e3a8a;
+  color: white;
+}
+
+.update-btn,
+.delete-btn,
+.buy-btn {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.update-btn {
+  background-color: #facc15;
+  color: #1e3a8a;
+}
+
+.update-btn:hover {
+  background-color: #eab308;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+.buy-btn {
+  background-color: #10b981;
+  color: white;
+  margin-top: 2px;
+}
+
+.buy-btn:hover {
+  background-color: #059669;
+}
+
