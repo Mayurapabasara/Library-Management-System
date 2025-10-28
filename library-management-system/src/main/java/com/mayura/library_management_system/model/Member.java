@@ -40,18 +40,18 @@ public class Member {
 		this.address = address;
 	}
 
-	public int getPhone_num() {
-		return phone_num;
+	public String getPhone() {
+		return phone;
 	}
 
-	public void setPhone_num(int phone_num) {
-		this.phone_num = phone_num;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 
 	@Column(nullable = true)
 	private String address;
 	
 	@Column(nullable = true)
-	private int phone_num;
+	private String phone; 
 
 }

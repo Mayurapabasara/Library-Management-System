@@ -1,24 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import MemberForm from "../components/MemberForm";
+import { api } from '../../src/service'
 
 export default function MemberPage() {
+
   // Sample data
-  const [members, setMembers] = useState([
-    { id: 1, name: "John Doe", address: "Colombo", phone: "0771234567" },
-  ]);
+  const [members, setMembers] = useState([]);
 
   const [books] = useState([
     { id: 1, title: "Harry Potter", price: 500 },
     { id: 2, title: "Game of Thrones", price: 750 },
   ]);
 
+
+  // Insert in to data
   const addMember = (member) => {
     api.addMember(member)
     setMembers([...members, { ...member, id: Date.now() }]);
   };
 
+  //delete data
   const deleteMember = (id) => {
-    api.deleteAuthor(id);
+    api.deleteMember(id);
     setMembers(members.filter((member) => member.id !== id));
   };
 
@@ -34,10 +37,11 @@ export default function MemberPage() {
     );
   };
 
+  //get data
   useEffect(() => {
     api.getMember()
         .then(
-            res => setMember(res.data)
+            res => setMembers(res.data)
         )
   }, []);
 

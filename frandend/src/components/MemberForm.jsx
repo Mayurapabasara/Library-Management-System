@@ -8,7 +8,7 @@ export default function MemberForm({ addMember }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name || !address || !phone) return;
-    addMember({ name, address, phone });
+    addMember({ name, address, phone }); //"phone" matchs backend "phone"
     setName("");
     setAddress("");
     setPhone("");
