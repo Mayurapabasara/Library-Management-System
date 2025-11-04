@@ -7,6 +7,62 @@ import java.time.LocalDateTime;
 @Table(name = "payments")
 public class Payment {
 
+	
+	package com.mayura.SimpleWebApp.controller;
+
+	import java.util.List;
+	import org.springframework.beans.factory.annotation.Autowired;
+	import org.springframework.web.bind.annotation.*;
+
+	import com.mayura.SimpleWebApp.model.Product;
+	import com.mayura.SimpleWebApp.repository.ProductRepository;
+	import com.mayura.SimpleWebApp.service.ProductService;
+
+	@RestController
+	@RequestMapping("/api/products")
+	@CrossOrigin(origins="http://localhost:5222")
+	public class ProductController {
+
+	    @Autowired
+	    private ProductRepository repo;
+	    
+	    @Autowired
+	    private ProductService service;
+
+	    @GetMapping
+	    public List<Product> getAllProducts() {
+	        return repo.findAll();
+	    }
+
+	    @GetMapping("/{id}")
+	    public Product getProduct(@PathVariable Long id) {
+	        return service.getProduct(id); // connect to the service user -> controlller -> service -> repository -> databse
+	    }
+	    
+
+	    @PostMapping
+	    public Product addProduct(@RequestBody Product product) {
+	    	product.setProdId(null);
+	        return repo.save(product);
+	    }
+
+	    @PutMapping("/{id}")
+	    public Product updateProduct(@PathVariable Long id, @RequestBody Product updated) {
+	        Product existing = repo.findById(id).orElse(null);
+	        if (existing != null) {
+	            existing.setProdName(updated.getProdName());
+	            existing.setPrice(updated.getPrice());
+	            return repo.save(existing);
+	        }
+	        return null;
+	    }
+
+	    @DeleteMapping("/products/   {id}")
+	    public void deleteProduct(@PathVariable Long id) {
+	        repo.deleteById(id);
+	    }
+	}
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long paymentId;
