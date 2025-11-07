@@ -8,32 +8,32 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mayura.library_management_system.Services.UserService;
 
+
 @Controller
 public class AuthController {
-	
-	@Autowired
-	private UserService userService;
-	
-	@GetMapping("/registe")
-	public String register() {
-		return "register";
-	}
-	
-	@PostMapping("/register")
-	public String registerUser(@RequestParam String username, String password) {
-		userService.registerUser(username, password);
-		return "redirect:/login";
-		
-	}
-	
-	@GetMapping("/login")
-	public String login() {
-		return "login";
-	}
-	
-	@GetMapping("/welcome")
-	public String welcome() {
-		return "welcome";
-	}
 
+    @Autowired
+    private UserService userService;
+
+    @GetMapping("/register")
+    public String showRegisterForm() {
+        return "register"; // templates/register.html
+    }
+
+    @PostMapping("/register")
+    public String registerUser(@RequestParam String username, @RequestParam String password) {
+        userService.registerUser(username, password);
+        return "redirect:/login"; // redirect to login page after registration
+    }
+
+    @GetMapping("/login")
+    public String showLoginForm() {
+        return "login"; // templates/login.html
+    }
+
+    @GetMapping("/welcome")
+    public String showWelcomePage() {
+        return "welcome"; // templates/welcome.html
+    }
 }
+
