@@ -6,5 +6,5 @@ import com.mayura.library_management_system.model.Rating;
 
 public interface RatingRepository extends JpaRepository<Rating, Long> {
 	
-	List<Rating> findByItemId(Long itemId);
+	List<Rating> findByItemId(Long ItemId);
 }

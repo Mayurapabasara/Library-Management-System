@@ -15,7 +15,7 @@
 
     <groupId>com.mayura</groupId>
     <artifactId>library-management-system</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>n
     <name>library-management-system</name>
     <description>Library Management System</description>
 
@@ -140,11 +140,11 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-        	<groupId>com.worksure</groupId>
-        	<artifactId>worksure</artifactId>
-        	<version>0.0.1-SNAPSHOT</version>
-        </dependency>
+<!--        <dependency>-->
+<!--        	<groupId>com.worksure</groupId>-->
+<!--        	<artifactId>worksure</artifactId>-->
+<!--        	<version>0.0.1-SNAPSHOT</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>

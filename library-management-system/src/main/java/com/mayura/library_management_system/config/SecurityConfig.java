@@ -20,22 +20,12 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(auth -> auth
-                //.requestMatchers("/register", "/login", "/css/**", "/js/**").permitAll()
+                .requestMatchers("/register", "/login", "/css/**", "/js/**").permitAll()
             	.requestMatchers("/api/**").permitAll()  // allow api(not allow security)
-                .anyRequest().authenticated()
+            	   .requestMatchers("/api/**/**").permitAll()
+            	.anyRequest().authenticated()
             )
-            .formLogin(form -> form
-                .loginPage("/login")               // Custom login page mapping
-                .loginProcessingUrl("/perform_login") // Action for login form
-                .defaultSuccessUrl("/welcome", true)
-                .failureUrl("/login?error=true")
-                .permitAll()
-            )
-            .logout(logout -> logout
-                .logoutUrl("/logout")
-                .logoutSuccessUrl("/login?logout=true")
-                .permitAll()
-            );
+            ;
 
         return http.build();
     }

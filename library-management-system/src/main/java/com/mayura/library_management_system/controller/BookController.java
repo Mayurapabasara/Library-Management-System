@@ -32,9 +32,6 @@ public class BookController {
 	public List<Book> getAllBooks(){
 		return bookRepo.findAll();
 	}
-	
-	
-	
 
 	 @DeleteMapping("/{id}")
 	 public void deleteCourse(@PathVariable Long id) {

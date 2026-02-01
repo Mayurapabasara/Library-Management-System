@@ -7,11 +7,35 @@ import jakarta.persistence.Id;
 
 @Entity
 public class Rating {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
-	private Long itemId;
-	private int stars;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private Long itemId;
+    
+    private int stars;
+
+    // REQUIRED by JPA
+    public Rating() {}
+
+    public Long getId() {
+        return id;
+    }
+
+    public Long getItemId() {
+        return itemId;
+    }
+
+    public void setItemId(Long itemId) {
+        this.itemId = itemId;
+    }
+
+    public int getStars() {
+        return stars;
+    }
+
+    public void setStars(int stars) {
+        this.stars = stars;
+    }
 }
