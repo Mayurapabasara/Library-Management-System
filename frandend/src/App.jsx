@@ -6,6 +6,8 @@ import AuthorPage from "./pages/authorPage";
 import BookPage from "./pages/bookPage";
 import MemberPage from "./pages/memberPage";
 import NotFoundPage from "./pages/notFoundPage";
+import StarRating from "./components/StarRating";
+
 
 export default function App() {
   return (
@@ -33,6 +35,11 @@ export default function App() {
       <footer className="footer">
         &copy; 2025 Library Management System. All rights reserved.
       </footer>
+
+      <div className="App">
+        <h1>Rate this item</h1>
+        <StarRating itemId={1} />
+      </div>
     </BrowserRouter>
   );
 }

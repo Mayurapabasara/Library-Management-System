@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import AuthorForm from "../components/AuthorForm";
 import {api} from '../../src/service'
+import axios from "axios";
 
 export default function AuthorPage() {
   // Sample state for authors
@@ -8,7 +9,8 @@ export default function AuthorPage() {
 
   const addAuthor = (author) => {
     //create a put function
-    api.addAuthor(author);
+
+    axios.post("http://localhost:8080/api/author", author)  //or        api.addAuthor(author); 
     setAuthors([...authors, { ...author, id: Date.now() }]);
 
   };
