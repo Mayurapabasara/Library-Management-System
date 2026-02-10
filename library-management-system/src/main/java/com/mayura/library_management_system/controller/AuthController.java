@@ -31,6 +31,11 @@ public class AuthController {
         return "login"; // templates/login.html
     }
 
+    @PostMapping("/login")
+    public String login(){
+        return "usr login";
+    }
+
     @GetMapping("/welcome")
     public String showWelcomePage() {
         return "welcome"; // templates/welcome.html
